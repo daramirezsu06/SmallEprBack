@@ -14,4 +14,10 @@ export class TypeCustomer {
 
   @OneToMany(() => Customer, (customer) => customer.typeCustomer)
   customers: Customer[];
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createDate: Date;
+
+  @Column({ type: 'timestamp', nullable: true, onUpdate: 'CURRENT_TIMESTAMP' })
+  updateDate: Date;
 }

@@ -40,4 +40,9 @@ export class Seller {
   // Otros campos que puedan ser necesarios según tu lógica
   @OneToMany(() => Customer, (customer) => customer.seller, { nullable: true })
   customers: Customer[];
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createDate: Date;
+
+  @Column({ type: 'timestamp', nullable: true, onUpdate: 'CURRENT_TIMESTAMP' })
+  updateDate: Date;
 }

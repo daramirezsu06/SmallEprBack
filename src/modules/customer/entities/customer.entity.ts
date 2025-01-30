@@ -45,4 +45,10 @@ export class Customer {
     (usuarioCustomer) => usuarioCustomer.customer,
   )
   usuarioCustomers: UsuarioCustomer;
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createDate: Date;
+
+  @Column({ type: 'timestamp', nullable: true, onUpdate: 'CURRENT_TIMESTAMP' })
+  updateDate: Date;
 }

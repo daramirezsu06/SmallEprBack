@@ -1,4 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, JoinColumn, OneToOne } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  JoinColumn,
+  OneToOne,
+  Column,
+} from 'typeorm';
 import { Customer } from './customer.entity'; // Ajusta las rutas según sea necesario
 import { User } from '../../user/entities/user.entity';
 
@@ -16,4 +22,10 @@ export class UsuarioCustomer {
   })
   @JoinColumn({ name: 'customer_id' })
   customer: Customer;
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createDate: Date;
+
+  @Column({ type: 'timestamp', nullable: true, onUpdate: 'CURRENT_TIMESTAMP' })
+  updateDate: Date;
 }

@@ -1,13 +1,21 @@
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { Module, OnModuleInit } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import config from './config/config';
 import { UserModule } from './modules/user/user.module';
 import { CustomerModule } from './modules/customer/customer.module';
-import { DatabaseModule } from './modules/database/database.module';
-import { ConfigModule } from '@nestjs/config';
 import { SellerModule } from './modules/seller/seller.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { DatabaseModule } from './modules/database/database.module';
+import { ProductsModule } from './modules/products/products.module';
+import { InventoriesModule } from './modules/inventories/inventories.module';
+import { FormulationsModule } from './modules/formulations/formulations.module';
+import { ProductionOrdersModule } from './modules/production-orders/production-orders.module';
+import { ProductionsModule } from './modules/productions/productions.module';
+import { PreloadDataModule } from './modules/preload-data/preload-data.module';
+import { PreloadDataService } from './modules/preload-data/preload-data.service';
 
-import config from './config/config';
+console.log(config());
 
 @Module({
   imports: [
@@ -15,13 +23,27 @@ import config from './config/config';
       load: [config],
       isGlobal: true,
     }),
-    ,
     UserModule,
     CustomerModule,
-    DatabaseModule,
     SellerModule,
+    DatabaseModule,
+    ProductsModule,
+    InventoriesModule,
+    FormulationsModule,
+    ProductionOrdersModule,
+    ProductionsModule,
+    PreloadDataModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule implements OnModuleInit {
+  constructor(private readonly preloadDataService: PreloadDataService) {}
+  async onModuleInit() {
+    await console.log('la precarga de datos esta comentada');
+  }
+
+  // async onModuleInit() {
+  //   await this.preloadDataService.preloadData();
+  // }
+}

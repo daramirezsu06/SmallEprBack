@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService } from '@nestjs/config';
 
+@Global()
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
@@ -12,13 +13,14 @@ import { ConfigService } from '@nestjs/config';
         username: configService.get<string>('postgres.username'),
         password: configService.get<string>('postgres.password'),
         database: configService.get<string>('postgres.dbname'),
-        // entities: [User, Role], // Aquí puedes agregar tus entidades como User, etc.
-        synchronize: false, // Cambia esto a false en producción para evitar perder datos
+
+        synchronize: false,
         autoLoadEntities: true,
         migrations: ['src/modules/database/migrations/*.ts'],
       }),
       inject: [ConfigService],
     }),
   ],
+  exports: [TypeOrmModule],
 })
 export class DatabaseModule {}

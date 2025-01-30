@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Producción",
+    "description": "Movimientos generados por el proceso de producción de productos."
+  },
+  {
+    "name": "Compras",
+    "description": "Movimientos generados por la compra de materias primas y otros insumos."
+  },
+  {
+    "name": "Ajuste de Inventario",
+    "description": "Movimientos utilizados para ajustar el inventario en caso de discrepancias."
+  },
+  {
+    "name": "Devolución",
+    "description": "Movimientos relacionados con la devolución de productos o materias primas."
+  },
+  {
+    "name": "Venta",
+    "description": "Movimientos generados por la venta de productos terminados."
+  },
+  {
+    "name": "Descarte",
+    "description": "Movimientos usados para registrar productos que han sido descartados o desechados."
+  }
+]

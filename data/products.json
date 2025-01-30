@@ -1,0 +1,380 @@
+[
+  {
+    "name": "Bolsas 18 x 25",
+    "description": "Bolsas de empaque tamaño 18x25",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 1,
+    "cost": 136.0,
+    "quantity": 317
+  },
+  {
+    "name": "Bolsas 10 x 25",
+    "description": "Bolsas de empaque tamaño 10x25",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 1,
+    "cost": 102.0,
+    "quantity": 321
+  },
+  {
+    "name": "Bolsas 18 x 22",
+    "description": "Bolsas de empaque tamaño 18x22",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 1,
+    "cost": 123.0,
+    "quantity": 536
+  },
+  {
+    "name": "Etiqueta Gales T x 5",
+    "description": "Etiqueta para productos, tamaño T x 5",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 2,
+    "cost": 152.0,
+    "quantity": 9226
+  },
+  {
+    "name": "Etiqueta Gales P x 5",
+    "description": "Etiqueta para productos, tamaño P x 5",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 2,
+    "cost": 152.0,
+    "quantity": 4323
+  },
+  {
+    "name": "Etiqueta Gales T x 2",
+    "description": "Etiqueta para productos, tamaño T x 2",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 2,
+    "cost": 115.0,
+    "quantity": 2273
+  },
+  {
+    "name": "Etiqueta Gales P x 2",
+    "description": "Etiqueta para productos, tamaño P x 2",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 2,
+    "cost": 115.0,
+    "quantity": 1398
+  },
+  {
+    "name": "Etiqueta Estrato 7 T",
+    "description": "Etiqueta para productos Estrato 7, tamaño T",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 2,
+    "cost": 152.0,
+    "quantity": 523
+  },
+  {
+    "name": "Etiqueta Estrato 7 P",
+    "description": "Etiqueta para productos Estrato 7, tamaño P",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 2,
+    "cost": 152.0,
+    "quantity": 523
+  },
+  {
+    "name": "Malla Roja",
+    "description": "Malla roja para empaque",
+    "unitId": 2,
+    "typeProductId": 2,
+    "subTypeProductId": 3,
+    "cost": 21.7,
+    "quantity": 2023
+  },
+  {
+    "name": "Malla Amarilla",
+    "description": "Malla amarilla para empaque",
+    "unitId": 2,
+    "typeProductId": 2,
+    "subTypeProductId": 3,
+    "cost": 21.7,
+    "quantity": 4000
+  },
+  {
+    "name": "Malla Verde",
+    "description": "Malla verde para empaque",
+    "unitId": 2,
+    "typeProductId": 2,
+    "subTypeProductId": 3,
+    "cost": 21.7,
+    "quantity": 0.437
+  },
+  {
+    "name": "Proteína de Soya Texturizada",
+    "description": "Proteína de soya texturizada para la elaboración de productos cárnicos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 4,
+    "cost": 6919.0,
+    "quantity": 24
+  },
+  {
+    "name": "Ají Abanero",
+    "description": "Ají abanero en polvo para condimentar",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 152000.0,
+    "quantity": 1.64
+  },
+  {
+    "name": "Ajo en Polvo",
+    "description": "Ajo en polvo para condimentar",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 23104.0,
+    "quantity": 3
+  },
+  {
+    "name": "Comino Molido",
+    "description": "Comino molido para condimentar",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 54066.0,
+    "quantity": 2
+  },
+  {
+    "name": "Cebolla en Polvo",
+    "description": "Cebolla en polvo para condimentar",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 27514.0,
+    "quantity": 2
+  },
+  {
+    "name": "Condimento Chorizo",
+    "description": "Condimento especial para la preparación de chorizo",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 13579.7,
+    "quantity": 10
+  },
+  {
+    "name": "Sal Nitro",
+    "description": "Sal nitro para la conservación del chorizo",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 5115.0,
+    "quantity": 7.5
+  },
+  {
+    "name": "Humo Poly",
+    "description": "Humo poly utilizado en el proceso de curado de chorizos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 15276.75,
+    "quantity": 4
+  },
+  {
+    "name": "Coria 28",
+    "description": "Coria 28 para uso en producción alimentaria",
+    "unitId": 8,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 11531.0,
+    "quantity": 36
+  },
+  {
+    "name": "Coria 23",
+    "description": "Coria 23 para uso en producción alimentaria",
+    "unitId": 8,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 7916.67,
+    "quantity": 26
+  },
+  {
+    "name": "Proteína de Soya",
+    "description": "Proteína de soya para producción alimentaria",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 4,
+    "cost": 9812.0,
+    "quantity": 10.2
+  },
+  {
+    "name": "Bobina de Hilo",
+    "description": "Bobina de hilo para envasado y embalaje",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 6,
+    "cost": 27514.0,
+    "quantity": 1.42
+  },
+  {
+    "name": "Páprica",
+    "description": "Páprica para dar sabor y color a los productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 36450.0,
+    "quantity": 1
+  },
+  {
+    "name": "Color",
+    "description": "Colorante alimenticio para dar tonalidad a los productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 15600.0,
+    "quantity": 1.75
+  },
+  {
+    "name": "Sal",
+    "description": "Sal común utilizada en la elaboración de productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 1650.0,
+    "quantity": 6
+  },
+  {
+    "name": "Cebolla Rama",
+    "description": "Cebolla rama utilizada en la elaboración de productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 10,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Cebolla Huevo",
+    "description": "Cebolla huevo utilizada en la elaboración de productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 10,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Cilantro",
+    "description": "Cilantro utilizado en la elaboración de productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 10,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Ajo",
+    "description": "Ajo utilizado en la elaboración de productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 10,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Carne Industrial de Cerdo",
+    "description": "Carne industrial de cerdo para la elaboración de productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 7,
+    "cost": 13000.0,
+    "quantity": 115
+  },
+  {
+    "name": "Cabeza de Cañón de Cerdo",
+    "description": "Cabeza de cañón de cerdo para la elaboración de productos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 7,
+    "cost": 18000.0,
+    "quantity": 0
+  },
+  {
+    "name": "Base Chorizo Tradicional",
+    "description": "Base para la fabricación de chorizo tradicional",
+    "unitId": 2,
+    "typeProductId": 3,
+    "subTypeProductId": 7,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Base Chorizo Picante",
+    "description": "Base para la fabricación de chorizo picante",
+    "unitId": 2,
+    "typeProductId": 3,
+    "subTypeProductId": 7,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Chorizo de Cerdo Gales Tradicional x 5",
+    "description": "Chorizo de cerdo tradicional de la marca Gales, paquete de 5 unidades",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Chorizo de Cerdo Gales Picante x 5",
+    "description": "Chorizo de cerdo picante de la marca Gales, paquete de 5 unidades",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Chorizo de Cerdo Gales Tradicional x 2",
+    "description": "Chorizo de cerdo tradicional de la marca Gales, paquete de 2 unidades",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Chorizo de Cerdo Gales Picante x 2",
+    "description": "Chorizo de cerdo picante de la marca Gales, paquete de 2 unidades",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Jabón Clean Gel 800g",
+    "description": "Jabón gel Clean de 800 gramos",
+    "unitId": 1,
+    "typeProductId": 5,
+    "subTypeProductId": 9,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Jabón Clean Gel 500g",
+    "description": "Jabón gel Clean de 500 gramos",
+    "unitId": 1,
+    "typeProductId": 5,
+    "subTypeProductId": 9,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Jabón Clean Gel Líquido 1L",
+    "description": "Jabón gel Clean líquido de 1 litro",
+    "unitId": 1,
+    "typeProductId": 5,
+    "subTypeProductId": 9,
+    "cost": 0,
+    "quantity": 0
+  }
+]

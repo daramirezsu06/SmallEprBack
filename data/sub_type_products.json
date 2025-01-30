@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Bolsas",
+    "description": "Bolsas de empaque para productos.",
+    "acronyms": "BO",
+    "typeProductId": 2
+  },
+  {
+    "name": "Etiquetas",
+    "description": "Etiquetas de identificación para productos.",
+    "acronyms": "ET",
+    "typeProductId": 2
+  },
+  {
+    "name": "Mallas",
+    "description": "Mallas para empaque de productos.",
+    "acronyms": "MA",
+    "typeProductId": 2
+  },
+  {
+    "name": "Proteínas",
+    "description": "Proteínas vegetales y animales para la producción.",
+    "acronyms": "PR",
+    "typeProductId": 1
+  },
+  {
+    "name": "Condimentos",
+    "description": "Especias y otros condimentos utilizados en la fabricación.",
+    "acronyms": "CO",
+    "typeProductId": 1
+  },
+  {
+    "name": "Carnes",
+    "description": "Carnes utilizadas en la fabricación de productos cárnicos.",
+    "acronyms": "CA",
+    "typeProductId": 1
+  },
+  {
+    "name": "Bases chorizo",
+    "description": "Bases utilizadas en la fabricación de productos cárnicos.",
+    "acronyms": "BA",
+    "typeProductId": 3
+  },
+  {
+    "name": "Chorizos",
+    "description": "Chorizos terminados para su venta al consumidor final.",
+    "acronyms": "CH",
+    "typeProductId": 4
+  },
+  {
+    "name": "Jabones",
+    "description": "Jabones comercializados",
+    "acronyms": "JA",
+    "typeProductId": 5
+  },
+  {
+    "name": "vegetales",
+    "description": "vegetales que se utilian en la elaboración de productos como cebolla, cilantro, ajo, etc.",
+    "acronyms": "VE",
+    "typeProductId": 1
+  }
+]

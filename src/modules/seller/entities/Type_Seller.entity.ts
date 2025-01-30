@@ -15,4 +15,9 @@ export class TypeSeller {
   // Relación con la entidad Seller (un TypeSeller puede tener muchos Sellers)
   @OneToMany(() => Seller, (seller) => seller.typeSeller)
   sellers: Seller[];
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createDate: Date;
+
+  @Column({ type: 'timestamp', nullable: true, onUpdate: 'CURRENT_TIMESTAMP' })
+  updateDate: Date;
 }

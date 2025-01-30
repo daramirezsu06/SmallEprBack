@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Materia Prima",
+    "description": "Productos básicos para la elaboración de productos alimenticios.",
+    "acronyms": "MP"
+  },
+  {
+    "name": "Material de Empaque",
+    "description": "Productos utilizados para el empaque de los productos alimenticios.",
+    "acronyms": "ME"
+  },
+  {
+    "name": "Producto Intermedio",
+    "description": "Productos en proceso de fabricación que requieren transformaciones adicionales.",
+    "acronyms": "PI"
+  },
+  {
+    "name": "Producto Terminado",
+    "description": "Productos listos para su venta al consumidor final.",
+    "acronyms": "PT"
+  },
+  {
+    "name": "Producto Comercializado",
+    "description": "Productos vendidos tal cual para el consumidor final.",
+    "acronyms": "PC"
+  }
+]

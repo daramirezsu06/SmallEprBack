@@ -1,3 +1,6 @@
+import 'dotenv/config';
+
+
 export default () => ({
   postgres: {
     username: process.env.POSTGRES_USER,

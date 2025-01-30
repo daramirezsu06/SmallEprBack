@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Unidad",
+    "description": "Unidad de medida para productos individuales.",
+    "acronyms": "UN"
+  },
+  {
+    "name": "Kilogramo",
+    "description": "Unidad de medida de peso, equivalente a 1000 gramos.",
+    "acronyms": "KG"
+  },
+  {
+    "name": "Gramos",
+    "description": "Unidad de medida de peso, equivalente a 1/1000 kilogramos.",
+    "acronyms": "GR"
+  },
+  {
+    "name": "Metros",
+    "description": "Unidad de medida de distancia, equivalente a 1/1000 kilómetros.",
+    "acronyms": "M"
+  },
+  {
+    "name": "Centímetros",
+    "description": "Unidad de medida de distancia, equivalente a 1/100 metros.",
+    "acronyms": "CM"
+  },
+  {
+    "name": "Litros",
+    "description": "Unidad de medida de volumen, equivalente 1 decimetro cúbico.",
+    "acronyms": "L"
+  },
+  {
+    "name": "Mililitros",
+    "description": "Unidad de medida de volumen, equivalente a 1/1000 litros.",
+    "acronyms": "ML"
+  },
+  {
+    "name": "Tubos",
+    "description": "Unidad de para cantidad de cilindros mangeras, lo adoptamos por la coria",
+    "acronyms": "TU"
+  }
+]

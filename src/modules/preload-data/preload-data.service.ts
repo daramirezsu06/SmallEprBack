@@ -37,6 +37,15 @@ export class PreloadDataService {
       await this.typeProductRepository.save(typeProduct);
     }
 
+    // Cargar los MovementTypes
+    const movementTypesData = JSON.parse(
+      fs.readFileSync(path.join(basePath, 'movement_types.json'), 'utf-8'),
+    );
+    for (const movementTypeData of movementTypesData) {
+      const movementType = this.movementTypeRepository.create(movementTypeData);
+      await this.movementTypeRepository.save(movementType);
+    }
+
     // Cargar los datos de SubTypeProduct
     const subTypeProductsData = JSON.parse(
       fs.readFileSync(path.join(basePath, 'sub_type_products.json'), 'utf-8'),

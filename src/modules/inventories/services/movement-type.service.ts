@@ -19,4 +19,8 @@ export class MovementTypeService {
     await this.movementTypeRepository.save(movementType);
     return movementType;
   }
+
+  async findAll() {
+    return await this.movementTypeRepository.find();
+  }
 }

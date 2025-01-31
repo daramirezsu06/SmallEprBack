@@ -11,5 +11,5 @@ export class CreateInventoryMovementsDto {
   movementTypeId: number;
 
   @IsNotEmpty()
-  inventoryId: number;
+  productId: number;
 }

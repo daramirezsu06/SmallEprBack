@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { MovementTypeService } from '../services/movement-type.service';
 import { CreateMovementTypeDto } from '../dto/create-movement-type.dto';
 
@@ -8,5 +8,10 @@ export class MovementTypeController {
   @Post()
   create(@Body() createMovementTypeDto: CreateMovementTypeDto) {
     return this.movementTypeService.create(createMovementTypeDto);
+  }
+
+  @Get()
+  findAll() {
+    return this.movementTypeService.findAll();
   }
 }

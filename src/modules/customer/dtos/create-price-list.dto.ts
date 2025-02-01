@@ -1,6 +1,6 @@
 import { IsString, IsNumber, IsOptional, IsNotEmpty } from 'class-validator';
 
-export class CreateCustomerDto {
+export class CreatePriceList {
   @IsString()
   @IsNotEmpty()
   name: string;
@@ -9,25 +9,12 @@ export class CreateCustomerDto {
   @IsNotEmpty()
   address: string;
 
-  @IsNumber()
-  @IsOptional()
-  lat?: number;
-
-  @IsNumber()
-  @IsOptional()
-  lon?: number;
-
   @IsString()
-  @IsOptional()
-  nit?: string;
-
-  @IsString()
-  @IsOptional()
-  tel?: string;
-
-  @IsNumber()
   @IsNotEmpty()
-  customerTypeId: number;
+  description: string;
+
+  @IsNotEmpty()
+  items: PrieceListItem[];
 
   @IsNumber()
   @IsOptional()
@@ -36,4 +23,13 @@ export class CreateCustomerDto {
   @IsNumber()
   @IsOptional()
   priceListId?: number;
+}
+
+export class PrieceListItem {
+  @IsNumber()
+  @IsNotEmpty()
+  price: number;
+  @IsNumber()
+  @IsNotEmpty()
+  productId: number;
 }

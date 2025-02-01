@@ -7,6 +7,12 @@ import { TypeProduct } from '../products/entities/type_product.entity';
 import { Unit } from '../products/entities/unit.entity';
 import { Inventory } from '../inventories/entities/inventory.entity';
 import { MovementType } from '../inventories/entities/movement_Type.entity';
+import { User } from '../user/entities/user.entity';
+import { Role } from '../user/entities/role.entity';
+import { Seller } from '../seller/entities/seller.entity';
+import { TypeSeller } from '../seller/entities/Type_Seller.entity';
+import { PriceList } from '../customer/entities/Price_List.entity';
+import { PriceListItem } from '../customer/entities/Price_List_Item.entity';
 
 @Module({
   imports: [
@@ -17,6 +23,13 @@ import { MovementType } from '../inventories/entities/movement_Type.entity';
       Unit,
       Inventory,
       MovementType,
+      User,
+      Role,
+      Seller,
+      User,
+      TypeSeller,
+      PriceList,
+      PriceListItem,
     ]),
   ],
   providers: [PreloadDataService],

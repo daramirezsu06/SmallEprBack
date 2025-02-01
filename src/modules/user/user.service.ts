@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
 import { Repository } from 'typeorm';
 import { Role } from './entities/role.entity';
-import CreateUserDto from './dtos/createUserDto';
 import { CreteRoleDto } from './dtos/creteRoleDto';
+import { CreateUserDto } from './dtos/createUserDto';
 
 @Injectable()
 export class UserService {
@@ -29,6 +29,7 @@ export class UserService {
     return this.userRepository.findOneBy({ id });
   }
   async createRole(createRoleDto: CreteRoleDto) {
-    return this.roleRepository.save(createRoleDto);
+    const newRole = this.roleRepository.create(createRoleDto);
+    return await this.roleRepository.save(newRole);
   }
 }

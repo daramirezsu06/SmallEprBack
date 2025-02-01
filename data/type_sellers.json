@@ -1,0 +1,30 @@
+[
+  {
+    "name": "TAT",
+    "description": "Tipo de vendedor especializado en TAT"
+  },
+  {
+    "name": "Grandes Superficies",
+    "description": "Vendedores que trabajan con grandes superficies comerciales"
+  },
+  {
+    "name": "Viajero",
+    "description": "Vendedores que trabajan de forma itinerante"
+  },
+  {
+    "name": "Mayoristas",
+    "description": "Vendedores enfocados en ventas mayoristas"
+  },
+  {
+    "name": "Consumidor final",
+    "description": "Vendedores que venden al consumidor final"
+  },
+  {
+    "name": "Multicanal",
+    "description": "Vendedores que vende a diferentes canales"
+  },
+  {
+    "name": "Administrador",
+    "description": "Vendedor con permisos de administración"
+  }
+]

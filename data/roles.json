@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Administrador",
+    "description": "Usuario con permisos completos"
+  },
+  {
+    "name": "Vendedor",
+    "description": "Usuario con permisos de ventas"
+  },
+  {
+    "name": "Cliente",
+    "description": "Usuario regular con acceso limitado"
+  }
+]

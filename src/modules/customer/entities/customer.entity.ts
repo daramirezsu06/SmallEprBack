@@ -8,6 +8,7 @@ import {
 import { UsuarioCustomer } from './Usuario_Customer.entity';
 import { TypeCustomer } from './Type_Customer.entity';
 import { Seller } from '../../seller/entities/seller.entity';
+import { PriceList } from './Price_List.entity';
 
 @Entity()
 export class Customer {
@@ -45,6 +46,9 @@ export class Customer {
     (usuarioCustomer) => usuarioCustomer.customer,
   )
   usuarioCustomers: UsuarioCustomer;
+
+  @ManyToOne(() => PriceList, (priceList) => priceList.customers)
+  priceList: PriceList;
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createDate: Date;

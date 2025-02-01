@@ -1,0 +1,20 @@
+[
+  {
+    "name": "David Ramirez",
+    "email": "david.ramirez@example.com",
+    "password": "password123",
+    "roleId": 1
+  },
+  {
+    "name": "Pablo Ramirez",
+    "email": "pablo.ramirez@example.com",
+    "password": "password123",
+    "roleId": 1
+  },
+  {
+    "name": "Jorge Marin",
+    "email": "jorge.marin@example.com",
+    "password": "password123",
+    "roleId": 2
+  }
+]

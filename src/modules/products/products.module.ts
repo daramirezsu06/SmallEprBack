@@ -11,10 +11,17 @@ import { UnitsService } from './services/units.service';
 import { TypeOfProductService } from './services/type-of-product.service';
 import { InventoriesModule } from '../inventories/inventories.module';
 import { SubTypeProduct } from './entities/sub_type_product.entity';
+import { PriceListItem } from '../customer/entities/Price_List_Item.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Product, TypeProduct, Unit, SubTypeProduct]),
+    TypeOrmModule.forFeature([
+      Product,
+      TypeProduct,
+      Unit,
+      SubTypeProduct,
+      PriceListItem,
+    ]),
     InventoriesModule,
   ],
   controllers: [ProductsController, UnitsController, TypeOfProductController],

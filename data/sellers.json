@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Pablo",
+    "lastName": "Ramirez",
+    "cedula": "123456789",
+    "userId": 2,
+    "typeSellerId": 7
+  },
+  {
+    "name": "Jorge",
+    "lastName": "Marin",
+    "cedula": "987654321",
+    "userId": 3,
+    "typeSellerId": 6
+  }
+]

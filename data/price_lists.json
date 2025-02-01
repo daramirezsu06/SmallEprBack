@@ -1,0 +1,104 @@
+[{
+  "name": "Precios TAT y  Autoservicios",
+  "description": "Lista de precios para clientes de TAT y autoservicios",
+  "items": [
+    {
+      "price": 10700,
+      "productId": 36
+    },
+    {
+      "price": 10700,
+      "productId": 37
+    },
+    {
+      "price": 4500,
+      "productId": 38
+    },
+    {
+      "price": 4500,
+      "productId": 39
+    },
+    {
+      "price": 12400,
+      "productId": 40
+    },
+    {
+      "price": 8700,
+      "productId": 41
+    },
+    {
+      "price": 10800,
+      "productId": 42
+    }
+  ]
+},{
+  "name": "Precios Grandes Superficies",
+  "address": "Dirección de la lista de precios",
+  "description": "Lista de precios para chorizos y jabones",
+  "items": [
+    {
+      "price": 10700,
+      "productId": 36
+    },
+    {
+      "price": 10700,
+      "productId": 37
+    },
+    {
+      "price": 4500,
+      "productId": 38
+    },
+    {
+      "price": 4500,
+      "productId": 39
+    },
+    {
+      "price": 12050,
+      "productId": 40
+    },
+    {
+      "price": 8700,
+      "productId": 41
+    },
+    {
+      "price": 10550,
+      "productId": 42
+    }
+  ]
+},
+{
+  "name": "Precios Grandes consumidor final",
+  "address": "Dirección de la lista de precios",
+  "description": "Lista de precios para chorizos y jabones",
+  "items": [
+    {
+      "price": 12000,
+      "productId": 36
+    },
+    {
+      "price": 12000,
+      "productId": 37
+    },
+    {
+      "price": 5000,
+      "productId": 38
+    },
+    {
+      "price": 5000,
+      "productId": 39
+    },
+    {
+      "price": 13500,
+      "productId": 40
+    },
+    {
+      "price": 9700,
+      "productId": 41
+    },
+    {
+      "price": 11700,
+      "productId": 42
+    }
+  ]
+}
+]

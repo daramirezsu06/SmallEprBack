@@ -13,6 +13,8 @@ import { Seller } from '../seller/entities/seller.entity';
 import { TypeSeller } from '../seller/entities/Type_Seller.entity';
 import { PriceList } from '../customer/entities/Price_List.entity';
 import { PriceListItem } from '../customer/entities/Price_List_Item.entity';
+import { Customer } from '../customer/entities/customer.entity';
+import { TypeCustomer } from '../customer/entities/Type_Customer.entity';
 
 @Module({
   imports: [
@@ -30,6 +32,8 @@ import { PriceListItem } from '../customer/entities/Price_List_Item.entity';
       TypeSeller,
       PriceList,
       PriceListItem,
+      Customer,
+      TypeCustomer,
     ]),
   ],
   providers: [PreloadDataService],

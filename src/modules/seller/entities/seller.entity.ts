@@ -10,6 +10,7 @@ import {
 import { TypeSeller } from './Type_Seller.entity';
 import { User } from '../../user/entities/user.entity';
 import { Customer } from '../../customer/entities/customer.entity';
+import { Sell } from 'src/modules/sells/entities/sell.entity';
 
 @Entity('sellers')
 export class Seller {
@@ -40,6 +41,9 @@ export class Seller {
   // Otros campos que puedan ser necesarios según tu lógica
   @OneToMany(() => Customer, (customer) => customer.seller, { nullable: true })
   customers: Customer[];
+
+  @OneToMany(() => Sell, (sell) => sell.seller, { nullable: true })
+  sells: Sell[];
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createDate: Date;
 

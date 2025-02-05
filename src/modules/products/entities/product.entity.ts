@@ -18,6 +18,7 @@ import { Production } from '../../productions/entities/production.entity';
 import { ProductionItems } from '../../productions/entities/Production_items.entity';
 import { SubTypeProduct } from './sub_type_product.entity';
 import { PriceListItem } from '../../customer/entities/Price_List_Item.entity';
+import { SellItems } from 'src/modules/sells/entities/sell_items.entity';
 
 @Entity('product')
 export class Product {
@@ -76,6 +77,9 @@ export class Product {
 
   @OneToMany(() => PriceListItem, (priceListItem) => priceListItem.product)
   priceListItems: PriceListItem[];
+
+  @OneToMany(() => SellItems, (sellItems) => sellItems.product)
+  sellItems: SellItems[];
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createDate: Date;

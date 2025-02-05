@@ -8,6 +8,7 @@ import {
 import { MovementType } from './movement_Type.entity';
 import { Product } from '../../products/entities/product.entity';
 import { Production } from '../../productions/entities/production.entity';
+import { SellItems } from 'src/modules/sells/entities/sell_items.entity';
 
 @Entity('inventory_movements')
 export class InventoryMovements {
@@ -31,6 +32,8 @@ export class InventoryMovements {
 
   @OneToOne(() => Production, (production) => production.inventoryMovements)
   production: Production;
+  @OneToOne(() => SellItems, (sellItems) => sellItems.inventoryMovements)
+  sellItems: SellItems;
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createDate: Date;

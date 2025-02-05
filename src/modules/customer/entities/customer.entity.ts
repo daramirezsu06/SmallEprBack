@@ -4,11 +4,13 @@ import {
   PrimaryGeneratedColumn,
   ManyToOne,
   OneToOne,
+  OneToMany,
 } from 'typeorm';
 import { UsuarioCustomer } from './Usuario_Customer.entity';
 import { TypeCustomer } from './Type_Customer.entity';
 import { Seller } from '../../seller/entities/seller.entity';
 import { PriceList } from './Price_List.entity';
+import { Sell } from 'src/modules/sells/entities/sell.entity';
 
 @Entity()
 export class Customer {
@@ -30,7 +32,7 @@ export class Customer {
   @Column({ type: 'varchar', length: 50, nullable: true })
   nit: string;
 
-  @Column({ type: 'varchar', length: 15, nullable: true })
+  @Column({ type: 'varchar', length: 30, nullable: true })
   tel: string;
 
   @ManyToOne(() => TypeCustomer, (typecustomer) => typecustomer.customers, {
@@ -49,6 +51,9 @@ export class Customer {
 
   @ManyToOne(() => PriceList, (priceList) => priceList.customers)
   priceList: PriceList;
+
+  @OneToMany(() => Sell, (sell) => sell.customer)
+  sells: Sell[];
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createDate: Date;

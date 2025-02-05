@@ -1,0 +1,30 @@
+[
+  {
+    "name": "TAT",
+    "description": "Comercio tradicional, pequeño detallista que vende productos en pequeñas cantidades."
+  },
+  {
+    "name": "Gran Superficie",
+    "description": "Grandes cadenas de distribución o supermercados que venden productos en grandes cantidades."
+  },
+  {
+    "name": "Distribuidor",
+    "description": "Intermediario que distribuye productos a otros comercios o clientes."
+  },
+  {
+    "name": "Mayorista",
+    "description": "Vende productos al por mayor a otros comerciantes o distribuidores."
+  },
+  {
+    "name": "Consumidor Final",
+    "description": "Clientes que compran para uso personal o final, sin intención de revender."
+  },
+  {
+    "name": "Autoservicio",
+    "description": "Establecimientos donde el cliente se sirve a sí mismo antes de pagar."
+  },
+  {
+    "name": "Restaurantes",
+    "description": "Establecimientos que preparan y sirven alimentos a los clientes."
+  }
+]

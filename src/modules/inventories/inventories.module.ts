@@ -30,6 +30,6 @@ import { Product } from '../products/entities/product.entity';
     MovementTypeService,
     InventoryMovementsService,
   ],
-  exports: [InventoriesService],
+  exports: [InventoriesService, InventoryMovementsService],
 })
 export class InventoriesModule {}

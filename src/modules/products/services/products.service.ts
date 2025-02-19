@@ -47,7 +47,13 @@ export class ProductsService {
     return product;
   }
 
-  async findAll() {
+  async findAll(typeId: number) {
+    if (typeId) {
+      return await this.productRepository.find({
+        where: { typeProduct: { id: typeId } },
+        relations: ['typeProduct', 'unit', 'subTypeProduct'],
+      });
+    }
     return await this.productRepository.find({
       relations: ['typeProduct', 'unit', 'subTypeProduct'],
     });

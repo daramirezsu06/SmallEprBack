@@ -8,7 +8,8 @@ import {
 import { MovementType } from './movement_Type.entity';
 import { Product } from '../../products/entities/product.entity';
 import { Production } from '../../productions/entities/production.entity';
-import { SellItems } from 'src/modules/sells/entities/sell_items.entity';
+import { SellItems } from '../../sells/entities/sell_items.entity';
+import { Purchase } from '../../purchases/entities/purchase.entity';
 
 @Entity('inventory_movements')
 export class InventoryMovements {
@@ -29,6 +30,9 @@ export class InventoryMovements {
 
   @ManyToOne(() => Product, (product) => product.inventoryMovements)
   product: Product;
+
+  @ManyToOne(() => Purchase, (purchase) => purchase.InventoryMovements)
+  purchase: Purchase;
 
   @OneToOne(() => Production, (production) => production.inventoryMovements)
   production: Production;

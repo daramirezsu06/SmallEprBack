@@ -15,6 +15,7 @@ import { ProductionsModule } from './modules/productions/productions.module';
 import { PreloadDataModule } from './modules/preload-data/preload-data.module';
 import { PreloadDataService } from './modules/preload-data/preload-data.service';
 import { SellsModule } from './modules/sells/sells.module';
+import { PurchasesModule } from './modules/purchases/purchases.module';
 
 console.log(config());
 
@@ -35,6 +36,7 @@ console.log(config());
     ProductionsModule,
     PreloadDataModule,
     SellsModule,
+    PurchasesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

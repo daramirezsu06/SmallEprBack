@@ -42,6 +42,12 @@
     "typeProductId": 3
   },
   {
+    "name": "base condimeto",
+    "description": "mesclas de condimentos utilizados en la fabricación de productos cárnicos.",
+    "acronyms": "BC",
+    "typeProductId": 3
+  },
+  {
     "name": "Chorizos",
     "description": "Chorizos terminados para su venta al consumidor final.",
     "acronyms": "CH",

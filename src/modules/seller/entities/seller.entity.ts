@@ -10,7 +10,7 @@ import {
 import { TypeSeller } from './Type_Seller.entity';
 import { User } from '../../user/entities/user.entity';
 import { Customer } from '../../customer/entities/customer.entity';
-import { Sell } from 'src/modules/sells/entities/sell.entity';
+import { Sell } from '../../sells/entities/sell.entity';
 
 @Entity('sellers')
 export class Seller {

@@ -10,7 +10,7 @@ import { UsuarioCustomer } from './Usuario_Customer.entity';
 import { TypeCustomer } from './Type_Customer.entity';
 import { Seller } from '../../seller/entities/seller.entity';
 import { PriceList } from './Price_List.entity';
-import { Sell } from 'src/modules/sells/entities/sell.entity';
+import { Sell } from '../../sells/entities/sell.entity';
 
 @Entity()
 export class Customer {

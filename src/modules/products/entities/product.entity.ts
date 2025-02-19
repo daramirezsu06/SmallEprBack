@@ -18,7 +18,7 @@ import { Production } from '../../productions/entities/production.entity';
 import { ProductionItems } from '../../productions/entities/Production_items.entity';
 import { SubTypeProduct } from './sub_type_product.entity';
 import { PriceListItem } from '../../customer/entities/Price_List_Item.entity';
-import { SellItems } from 'src/modules/sells/entities/sell_items.entity';
+import { SellItems } from '../../sells/entities/sell_items.entity';
 
 @Entity('product')
 export class Product {

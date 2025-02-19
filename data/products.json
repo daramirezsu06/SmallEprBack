@@ -6,7 +6,7 @@
     "typeProductId": 2,
     "subTypeProductId": 1,
     "cost": 136.0,
-    "quantity": 317
+    "quantity": 337
   },
   {
     "name": "Bolsas 10 x 25",
@@ -15,7 +15,7 @@
     "typeProductId": 2,
     "subTypeProductId": 1,
     "cost": 102.0,
-    "quantity": 321
+    "quantity": 105
   },
   {
     "name": "Bolsas 18 x 22",
@@ -24,7 +24,16 @@
     "typeProductId": 2,
     "subTypeProductId": 1,
     "cost": 123.0,
-    "quantity": 536
+    "quantity": 2575
+  },
+  {
+    "name": "Bolsas 25 x 35",
+    "description": "Bolsas de empaque tamaño 25x35",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 1,
+    "cost": 325,
+    "quantity": 93
   },
   {
     "name": "Etiqueta Gales T x 5",
@@ -33,7 +42,7 @@
     "typeProductId": 2,
     "subTypeProductId": 2,
     "cost": 152.0,
-    "quantity": 9226
+    "quantity": 9700
   },
   {
     "name": "Etiqueta Gales P x 5",
@@ -42,7 +51,7 @@
     "typeProductId": 2,
     "subTypeProductId": 2,
     "cost": 152.0,
-    "quantity": 4323
+    "quantity": 3160
   },
   {
     "name": "Etiqueta Gales T x 2",
@@ -51,7 +60,7 @@
     "typeProductId": 2,
     "subTypeProductId": 2,
     "cost": 115.0,
-    "quantity": 2273
+    "quantity": 2035
   },
   {
     "name": "Etiqueta Gales P x 2",
@@ -60,7 +69,7 @@
     "typeProductId": 2,
     "subTypeProductId": 2,
     "cost": 115.0,
-    "quantity": 1398
+    "quantity": 1241
   },
   {
     "name": "Etiqueta Estrato 7 T",
@@ -69,7 +78,7 @@
     "typeProductId": 2,
     "subTypeProductId": 2,
     "cost": 152.0,
-    "quantity": 523
+    "quantity": 488
   },
   {
     "name": "Etiqueta Estrato 7 P",
@@ -78,7 +87,16 @@
     "typeProductId": 2,
     "subTypeProductId": 2,
     "cost": 152.0,
-    "quantity": 523
+    "quantity": 488
+  },
+  {
+    "name": "Etiqueta Maquila Bogota",
+    "description": "Etiqueta para productos Estrato 7, tamaño P",
+    "unitId": 1,
+    "typeProductId": 2,
+    "subTypeProductId": 2,
+    "cost": 0,
+    "quantity": 140
   },
   {
     "name": "Malla Roja",
@@ -87,7 +105,7 @@
     "typeProductId": 2,
     "subTypeProductId": 3,
     "cost": 21.7,
-    "quantity": 2023
+    "quantity": 1.85
   },
   {
     "name": "Malla Amarilla",
@@ -96,7 +114,7 @@
     "typeProductId": 2,
     "subTypeProductId": 3,
     "cost": 21.7,
-    "quantity": 4000
+    "quantity": 4.05
   },
   {
     "name": "Malla Verde",
@@ -105,7 +123,7 @@
     "typeProductId": 2,
     "subTypeProductId": 3,
     "cost": 21.7,
-    "quantity": 0.437
+    "quantity": 3.95
   },
   {
     "name": "Proteína de Soya Texturizada",
@@ -114,7 +132,7 @@
     "typeProductId": 1,
     "subTypeProductId": 4,
     "cost": 6919.0,
-    "quantity": 24
+    "quantity": 12
   },
   {
     "name": "Ají Abanero",
@@ -123,7 +141,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 152000.0,
-    "quantity": 1.64
+    "quantity": 3.4
   },
   {
     "name": "Ajo en Polvo",
@@ -132,7 +150,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 23104.0,
-    "quantity": 3
+    "quantity": 4.55
   },
   {
     "name": "Comino Molido",
@@ -141,7 +159,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 54066.0,
-    "quantity": 2
+    "quantity": 2.9
   },
   {
     "name": "Cebolla en Polvo",
@@ -150,7 +168,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 27514.0,
-    "quantity": 2
+    "quantity": 3
   },
   {
     "name": "Condimento Chorizo",
@@ -159,7 +177,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 13579.7,
-    "quantity": 10
+    "quantity": 15.1
   },
   {
     "name": "Sal Nitro",
@@ -168,7 +186,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 5115.0,
-    "quantity": 7.5
+    "quantity": 6
   },
   {
     "name": "Humo Poly",
@@ -177,7 +195,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 15276.75,
-    "quantity": 4
+    "quantity": 3.3
   },
   {
     "name": "Coria 28",
@@ -186,7 +204,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 11531.0,
-    "quantity": 36
+    "quantity": 26
   },
   {
     "name": "Coria 23",
@@ -195,7 +213,16 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 7916.67,
-    "quantity": 26
+    "quantity": 23
+  },
+  {
+    "name": "Coria 29",
+    "description": "Coria 29 para uso en producción alimentaria",
+    "unitId": 8,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 11625.0,
+    "quantity": 11
   },
   {
     "name": "Proteína de Soya",
@@ -204,7 +231,7 @@
     "typeProductId": 1,
     "subTypeProductId": 4,
     "cost": 9812.0,
-    "quantity": 10.2
+    "quantity": 7.1
   },
   {
     "name": "Bobina de Hilo",
@@ -213,7 +240,7 @@
     "typeProductId": 1,
     "subTypeProductId": 6,
     "cost": 27514.0,
-    "quantity": 1.42
+    "quantity": 1.96
   },
   {
     "name": "Páprica",
@@ -222,7 +249,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 36450.0,
-    "quantity": 1
+    "quantity": 1.05
   },
   {
     "name": "Color",
@@ -231,7 +258,7 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 15600.0,
-    "quantity": 1.75
+    "quantity": 2.35
   },
   {
     "name": "Sal",
@@ -240,8 +267,27 @@
     "typeProductId": 1,
     "subTypeProductId": 5,
     "cost": 1650.0,
-    "quantity": 6
+    "quantity": 0
   },
+  {
+    "name": "Color Naranja",
+    "description": "color naranja Para Chorizos",
+    "unitId": 2,
+    "typeProductId": 1,
+    "subTypeProductId": 5,
+    "cost": 52834,
+    "quantity": 1
+  },
+  {
+    "name": "Premescla Condimentos",
+    "description": "Premescla condimentos para Chorizos",
+    "unitId": 2,
+    "typeProductId": 3,
+    "subTypeProductId": 8,
+    "cost": 15367,
+    "quantity": 6.48
+  },
+
   {
     "name": "Cebolla Rama",
     "description": "Cebolla rama utilizada en la elaboración de productos",
@@ -285,7 +331,7 @@
     "typeProductId": 1,
     "subTypeProductId": 7,
     "cost": 13000.0,
-    "quantity": 115
+    "quantity": 0
   },
   {
     "name": "Cabeza de Cañón de Cerdo",
@@ -297,8 +343,8 @@
     "quantity": 0
   },
   {
-    "name": "Base Chorizo Tradicional",
-    "description": "Base para la fabricación de chorizo tradicional",
+    "name": "Base Chorizo  Gales Tradicional",
+    "description": "Base para la fabricación de chorizo Gales tradicional",
     "unitId": 2,
     "typeProductId": 3,
     "subTypeProductId": 7,
@@ -306,8 +352,35 @@
     "quantity": 0
   },
   {
-    "name": "Base Chorizo Picante",
-    "description": "Base para la fabricación de chorizo picante",
+    "name": "Base Chorizo Chorizo Gales Picante",
+    "description": "Base para la fabricación de chorizo Gales picante",
+    "unitId": 2,
+    "typeProductId": 3,
+    "subTypeProductId": 7,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Base Chorizo Chorizo Estrato 7 Picante",
+    "description": "Base para la fabricación de chorizo E7 Picante",
+    "unitId": 2,
+    "typeProductId": 3,
+    "subTypeProductId": 7,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Base Chorizo Chorizo Estrato 7 radicionalT",
+    "description": "Base para la fabricación de chorizo E7 tradicional",
+    "unitId": 2,
+    "typeProductId": 3,
+    "subTypeProductId": 7,
+    "cost": 0,
+    "quantity": 0
+  },
+  {
+    "name": "Base Chorizo Chorizo 30Cm ",
+    "description": "Base para la fabricación de chorizo 30Cm",
     "unitId": 2,
     "typeProductId": 3,
     "subTypeProductId": 7,
@@ -320,8 +393,26 @@
     "unitId": 1,
     "typeProductId": 4,
     "subTypeProductId": 8,
-    "cost": 0,
-    "quantity": 0
+    "cost": 5880,
+    "quantity": 426
+  },
+  {
+    "name": "Chorizo de Cerdo 30Cm x10",
+    "description": "Chorizo de cerdo parillero 30cm Paquete x 10",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 19700,
+    "quantity": 20
+  },
+  {
+    "name": "Chorizo de Cerdo picante E7 coctel x 400gr",
+    "description": "Chorizo de cerdo picante coctel Paquete x 400gr",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 8400,
+    "quantity": 42
   },
   {
     "name": "Chorizo de Cerdo Gales Picante x 5",
@@ -329,8 +420,36 @@
     "unitId": 1,
     "typeProductId": 4,
     "subTypeProductId": 8,
-    "cost": 0,
-    "quantity": 0
+    "cost": 5880,
+    "quantity": 99
+  },
+
+  {
+    "name": "Chorizo de Cerdo Gales Picante x 2",
+    "description": "Chorizo de cerdo picante de la marca Gales, paquete de 2 unidades",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 2463,
+    "quantity": 85
+  },
+  {
+    "name": "Chorizo de Cerdo Gales Estrato 7 Picante x 5",
+    "description": "Chorizo de cerdo picante x 5 unidades Macar estrato 7",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 8258,
+    "quantity": 46
+  },
+  {
+    "name": "Chorizo de Cerdo Gales Estrato 7 Tradicional x 5",
+    "description": "Chorizo de cerdo tradicional x 5 unidades Macar estrato 7",
+    "unitId": 1,
+    "typeProductId": 4,
+    "subTypeProductId": 8,
+    "cost": 8258,
+    "quantity": 29
   },
   {
     "name": "Chorizo de Cerdo Gales Tradicional x 2",
@@ -338,17 +457,8 @@
     "unitId": 1,
     "typeProductId": 4,
     "subTypeProductId": 8,
-    "cost": 0,
-    "quantity": 0
-  },
-  {
-    "name": "Chorizo de Cerdo Gales Picante x 2",
-    "description": "Chorizo de cerdo picante de la marca Gales, paquete de 2 unidades",
-    "unitId": 1,
-    "typeProductId": 4,
-    "subTypeProductId": 8,
-    "cost": 0,
-    "quantity": 0
+    "cost": 2463,
+    "quantity": 165
   },
   {
     "name": "Jabón Clean Gel 800g",

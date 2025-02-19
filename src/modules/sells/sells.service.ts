@@ -29,13 +29,15 @@ export class SellsService {
     private movementTypeRepository: Repository<MovementType>,
   ) {}
   async create(createSellDto: CreateSellDto) {
-    const { sellerId, customerId, sellItems, paid } = createSellDto;
-    const seller = await this.sellerRepository.findOne({
-      where: { id: sellerId },
-    });
+    const { customerId, sellItems, paid } = createSellDto;
     const customer = await this.customerRepository.findOne({
       where: { id: customerId },
+      relations: ['seller'],
     });
+    const seller = customer.seller;
+
+    console.log('seller', seller);
+    console.log('customer', customer);
 
     const queryRunner =
       this.sellRepository.manager.connection.createQueryRunner();
@@ -50,6 +52,7 @@ export class SellsService {
       sell.totalPrice = 0;
 
       await queryRunner.manager.save(Sell, sell);
+      console.log('sell', sell);
 
       let totalCost = 0;
       let totalPrice = 0;
@@ -59,17 +62,21 @@ export class SellsService {
         const product = await this.productRepository.findOne({
           where: { id: sellItem.productId },
         });
+        console.log('product', product);
         const inventoryMovements = new InventoryMovements();
 
         const inventory = await this.inventoryRepository.findOne({
-          where: { product: product },
+          where: { product: { id: product.id } },
+          relations: ['product'],
         });
 
-        inventoryMovements.quantity = sellItem.quantity;
+        console.log('inventory', inventory);
+
+        inventoryMovements.quantity = -sellItem.quantity;
         inventoryMovements.cost = inventory.cost;
         inventoryMovements.product = product;
         inventoryMovements.movementType =
-          await this.movementTypeRepository.findOne({ where: { id: 1 } });
+          await this.movementTypeRepository.findOne({ where: { id: 5 } });
         await queryRunner.manager.save(InventoryMovements, inventoryMovements);
 
         const sellItemEntity = new SellItems();

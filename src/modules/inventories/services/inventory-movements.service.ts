@@ -74,4 +74,49 @@ export class InventoryMovementsService {
       relations: ['movementType', 'product'],
     });
   }
+
+  async createWithManager(
+    createInventoryMovementsDto: CreateInventoryMovementsDto,
+    manager,
+  ) {
+    const { quantity, cost, movementTypeId, productId } =
+      createInventoryMovementsDto;
+
+    // Obtener el tipo de movimiento
+    const movementType = await manager.findOne(MovementType, {
+      where: { id: movementTypeId },
+    });
+    if (!movementType) {
+      throw new Error('Tipo de movimiento no encontrado');
+    }
+
+    // Obtener el inventario del producto
+    const inventory = await manager.findOne(Inventory, {
+      where: { product: { id: productId } },
+      relations: ['product'],
+    });
+    if (!inventory) {
+      throw new Error('Inventario no encontrado');
+    }
+
+    // Crear el movimiento de inventario
+    const inventoryMovement = new InventoryMovements();
+    inventoryMovement.quantity = quantity;
+    inventoryMovement.cost = cost ?? inventory.cost;
+    inventoryMovement.product = inventory.product;
+    inventoryMovement.movementType = movementType;
+    await manager.save(InventoryMovements, inventoryMovement);
+
+    // Actualizar el inventario
+    if (cost !== undefined) {
+      const currentCost = +inventory.cost * +inventory.quantity;
+      const productCost = cost * quantity;
+      const newInventoryQuantity = +inventory.quantity + quantity;
+      inventory.cost = (productCost + currentCost) / newInventoryQuantity;
+    }
+    inventory.quantity = +inventory.quantity + quantity;
+    await manager.save(Inventory, inventory);
+
+    return inventoryMovement;
+  }
 }

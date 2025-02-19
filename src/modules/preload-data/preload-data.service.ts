@@ -183,7 +183,7 @@ export class PreloadDataService {
     //   seller.user = user;
     //   await this.sellerRepository.save(seller);
     // }
-    // Cargar los precios
+    // // Cargar los precios
     // const priceListsData = JSON.parse(
     //   fs.readFileSync(path.join(basePath, 'price_lists.json'), 'utf-8'),
     // );
@@ -205,56 +205,56 @@ export class PreloadDataService {
     //   await this.priceListRepository.save(priceList);
     // }
 
-    // Cargar los tipos de clientes
-    const typeCustomersData = JSON.parse(
-      fs.readFileSync(path.join(basePath, 'type_customer.json'), 'utf-8'),
-    );
-    for (const typeCustomerData of typeCustomersData) {
-      const { name, description } = typeCustomerData;
-      const typeCustomer = this.typeCustomerRepository.create();
-      typeCustomer.name = name;
-      typeCustomer.description = description;
-      await this.typeCustomerRepository.save(typeCustomer);
-    }
+    // // Cargar los tipos de clientes
+    // const typeCustomersData = JSON.parse(
+    //   fs.readFileSync(path.join(basePath, 'type_customer.json'), 'utf-8'),
+    // );
+    // for (const typeCustomerData of typeCustomersData) {
+    //   const { name, description } = typeCustomerData;
+    //   const typeCustomer = this.typeCustomerRepository.create();
+    //   typeCustomer.name = name;
+    //   typeCustomer.description = description;
+    //   await this.typeCustomerRepository.save(typeCustomer);
+    // }
 
-    // Cargar los clientes
-    const customersData = JSON.parse(
-      fs.readFileSync(path.join(basePath, 'customer.json'), 'utf-8'),
-    );
-    for (const customerData of customersData) {
-      const {
-        name,
-        address,
-        lat,
-        lon,
-        nit,
-        tel,
-        customerTypeId,
-        sellerId,
-        priceListId,
-      } = customerData;
-      const typeCustomer = await this.typeCustomerRepository.findOne({
-        where: { id: customerTypeId },
-      });
-      const seller = await this.sellerRepository.findOne({
-        where: { id: sellerId },
-      });
-      const priceList = await this.priceListRepository.findOne({
-        where: { id: priceListId },
-      });
-      const customer = this.customerRepository.create();
-      customer.typeCustomer = typeCustomer;
-      customer.name = name;
-      customer.address = address;
-      customer.lat = lat;
-      customer.lon = lon;
-      customer.nit = nit;
-      customer.tel = tel;
-      customer.typeCustomer = typeCustomer;
-      customer.seller = seller;
-      customer.priceList = priceList;
-      await this.customerRepository.save(customer);
-    }
+    // // Cargar los clientes
+    // const customersData = JSON.parse(
+    //   fs.readFileSync(path.join(basePath, 'customer.json'), 'utf-8'),
+    // );
+    // for (const customerData of customersData) {
+    //   const {
+    //     name,
+    //     address,
+    //     lat,
+    //     lon,
+    //     nit,
+    //     tel,
+    //     customerTypeId,
+    //     sellerId,
+    //     priceListId,
+    //   } = customerData;
+    //   const typeCustomer = await this.typeCustomerRepository.findOne({
+    //     where: { id: customerTypeId },
+    //   });
+    //   const seller = await this.sellerRepository.findOne({
+    //     where: { id: sellerId },
+    //   });
+    //   const priceList = await this.priceListRepository.findOne({
+    //     where: { id: priceListId },
+    //   });
+    //   const customer = this.customerRepository.create();
+    //   customer.typeCustomer = typeCustomer;
+    //   customer.name = name;
+    //   customer.address = address;
+    //   customer.lat = lat;
+    //   customer.lon = lon;
+    //   customer.nit = nit;
+    //   customer.tel = tel;
+    //   customer.typeCustomer = typeCustomer;
+    //   customer.seller = seller;
+    //   customer.priceList = priceList;
+    //   await this.customerRepository.save(customer);
+    // }
 
     console.log('Datos precargados correctamente');
   }

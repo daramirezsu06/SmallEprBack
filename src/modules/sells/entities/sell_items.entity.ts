@@ -1,4 +1,4 @@
-import { InventoryMovements } from 'src/modules/inventories/entities/inventory_movements.entity';
+import { InventoryMovements } from '../../inventories/entities/inventory_movements.entity';
 import {
   Column,
   Entity,
@@ -8,7 +8,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Sell } from './sell.entity';
-import { Product } from 'src/modules/products/entities/product.entity';
+import { Product } from '../../products/entities/product.entity';
 
 @Entity()
 export class SellItems {

@@ -59,6 +59,7 @@ export class ProductionOrdersService {
           'product',
           'productionOrderItems',
           'productionOrderItems.product',
+          'productionOrderItems.product.unit',
         ],
       });
 

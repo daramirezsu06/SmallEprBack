@@ -1,4 +1,4 @@
-import { Controller, Post } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 
 import { CustomerService } from './customer.service';
 import { CreatePriceList } from './dtos/create-price-list.dto';
@@ -15,5 +15,9 @@ export class CustomerController {
   @Post('priceList')
   createPriceList(priceList: CreatePriceList) {
     return this.customerService.createPriceList(priceList);
+  }
+  @Get()
+  getCustomers() {
+    return this.customerService.getCustomers();
   }
 }

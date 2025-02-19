@@ -19,5 +19,55 @@
     "tel": "+57 098 765 4321",
     "customerTypeId": 2,
     "sellerId": 1
+  },
+  {
+    "name": "Merca Lider ",
+    "address": "plaza de flores",
+    "lat": 4.61,
+    "lon": -74.08,
+    "nit": "0987654321",
+    "tel": "+57 098 765 4321",
+    "customerTypeId": 2,
+    "sellerId": 1
+  },
+  {
+    "name": "Super Exprex ",
+    "address": "plaza de flores",
+    "lat": 4.61,
+    "lon": -74.08,
+    "nit": "0987654321",
+    "tel": "+57 098 765 4321",
+    "customerTypeId": 2,
+    "sellerId": 1
+  },
+  {
+    "name": "Inversiones logros ",
+    "address": "plaza de flores",
+    "lat": 4.61,
+    "lon": -74.08,
+    "nit": "0987654321",
+    "tel": "+57 098 765 4321",
+    "customerTypeId": 2,
+    "sellerId": 1
+  },
+  {
+    "name": "supermercados boom ",
+    "address": "plaza de flores",
+    "lat": 4.61,
+    "lon": -74.08,
+    "nit": "0987654321",
+    "tel": "+57 098 765 4321",
+    "customerTypeId": 2,
+    "sellerId": 1
+  },
+  {
+    "name": "consumidor final ",
+    "address": "plaza de flores",
+    "lat": 4.61,
+    "lon": -74.08,
+    "nit": "0987654321",
+    "tel": "+57 098 765 4321",
+    "customerTypeId": 2,
+    "sellerId": 1
   }
 ]

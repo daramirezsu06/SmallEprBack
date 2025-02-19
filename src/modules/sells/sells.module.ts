@@ -9,6 +9,7 @@ import { Seller } from '../seller/entities/seller.entity';
 import { InventoryMovements } from '../inventories/entities/inventory_movements.entity';
 import { Inventory } from '../inventories/entities/inventory.entity';
 import { Customer } from '../customer/entities/customer.entity';
+import { MovementType } from '../inventories/entities/movement_Type.entity';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { Customer } from '../customer/entities/customer.entity';
       InventoryMovements,
       Inventory,
       Customer,
+      MovementType,
     ]),
   ],
   controllers: [SellsController],

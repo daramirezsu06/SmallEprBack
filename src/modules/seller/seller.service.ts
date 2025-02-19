@@ -33,4 +33,7 @@ export class SellerService {
     const newTypeSeller = this.typeSellerRepository.create(createTypeSellerDto);
     return await this.typeSellerRepository.save(newTypeSeller);
   }
+  async getSellers() {
+    return await this.sellerRepository.find();
+  }
 }

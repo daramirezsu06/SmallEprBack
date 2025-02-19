@@ -1,5 +1,5 @@
-import { Customer } from 'src/modules/customer/entities/customer.entity';
-import { Seller } from 'src/modules/seller/entities/seller.entity';
+import { Customer } from '../../customer/entities/customer.entity';
+import { Seller } from '../../seller/entities/seller.entity';
 import {
   Column,
   Entity,

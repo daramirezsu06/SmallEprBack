@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { SellerService } from './seller.service';
 import { CreateTypeSellerDto } from './dtos/createTypeSellerDto';
 import { CreateSellerDto } from './dtos/createSellerDto';
@@ -15,5 +15,9 @@ export class SellerController {
   @Post('typeSeller')
   createTypeSeller(@Body() createTypeSellerDto: CreateTypeSellerDto) {
     return this.sellerService.createTypeSeller(createTypeSellerDto);
+  }
+  @Get()
+  getSellers() {
+    return this.sellerService.getSellers();
   }
 }

@@ -16,6 +16,7 @@ import { PreloadDataModule } from './modules/preload-data/preload-data.module';
 import { PreloadDataService } from './modules/preload-data/preload-data.service';
 import { SellsModule } from './modules/sells/sells.module';
 import { PurchasesModule } from './modules/purchases/purchases.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 console.log(config());
 
@@ -37,6 +38,7 @@ console.log(config());
     PreloadDataModule,
     SellsModule,
     PurchasesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

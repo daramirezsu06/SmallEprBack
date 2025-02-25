@@ -1,3 +1,4 @@
+import { Seller } from 'src/modules/seller/entities/seller.entity';
 import { UsuarioCustomer } from '../../customer/entities/Usuario_Customer.entity';
 import { Role } from './role.entity';
 import {
@@ -33,4 +34,7 @@ export class User {
 
   @OneToOne(() => UsuarioCustomer, (usuarioCustomer) => usuarioCustomer.user)
   usuarioCustomers: UsuarioCustomer;
+
+  @OneToOne(() => Seller, (seller) => seller.user)
+  seller: Seller;
 }

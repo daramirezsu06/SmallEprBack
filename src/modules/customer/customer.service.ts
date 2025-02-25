@@ -39,4 +39,7 @@ export class CustomerService {
       relations: ['seller', 'priceList.priceListItems.product'],
     });
   }
+  async getCustomerType() {
+    return await this.typeCustomerRepository.find();
+  }
 }

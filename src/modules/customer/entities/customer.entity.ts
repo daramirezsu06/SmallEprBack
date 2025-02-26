@@ -11,6 +11,7 @@ import { TypeCustomer } from './Type_Customer.entity';
 import { Seller } from '../../seller/entities/seller.entity';
 import { PriceList } from './Price_List.entity';
 import { Sell } from '../../sells/entities/sell.entity';
+import { Neighborhood } from '../../geo-segmentation/entities/neighborhood.entity';
 
 @Entity()
 export class Customer {
@@ -51,6 +52,9 @@ export class Customer {
 
   @ManyToOne(() => PriceList, (priceList) => priceList.customers)
   priceList: PriceList;
+
+  @ManyToOne(() => Neighborhood, (neighborhood) => neighborhood.customers)
+  neighborhood: Neighborhood;
 
   @OneToMany(() => Sell, (sell) => sell.customer)
   sells: Sell[];

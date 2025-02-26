@@ -17,6 +17,7 @@ import { PreloadDataService } from './modules/preload-data/preload-data.service'
 import { SellsModule } from './modules/sells/sells.module';
 import { PurchasesModule } from './modules/purchases/purchases.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { GeoSegmentationModule } from './modules/geo-segmentation/geo-segmentation.module';
 
 console.log(config());
 
@@ -39,6 +40,7 @@ console.log(config());
     SellsModule,
     PurchasesModule,
     AuthModule,
+    GeoSegmentationModule,
   ],
   controllers: [AppController],
   providers: [AppService],

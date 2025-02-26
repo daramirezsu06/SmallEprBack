@@ -1,4 +1,4 @@
-import { Seller } from 'src/modules/seller/entities/seller.entity';
+import { Seller } from '../../seller/entities/seller.entity';
 import { UsuarioCustomer } from '../../customer/entities/Usuario_Customer.entity';
 import { Role } from './role.entity';
 import {

@@ -17,6 +17,8 @@ import { PriceList } from '../customer/entities/Price_List.entity';
 import { PriceListItem } from '../customer/entities/Price_List_Item.entity';
 import { Customer } from '../customer/entities/customer.entity';
 import { TypeCustomer } from '../customer/entities/Type_Customer.entity';
+import { Municipality } from '../geo-segmentation/entities/municipality.entity';
+import { Neighborhood } from '../geo-segmentation/entities/neighborhood.entity';
 const basePath = path.join(__dirname, '../../../data');
 
 @Injectable()
@@ -47,6 +49,10 @@ export class PreloadDataService {
     private customerRepository: Repository<Customer>,
     @InjectRepository(TypeCustomer)
     private typeCustomerRepository: Repository<TypeCustomer>,
+    @InjectRepository(Municipality)
+    private municipalityRepository: Repository<Municipality>,
+    @InjectRepository(Neighborhood)
+    private neighborhoodRepository: Repository<Neighborhood>,
   ) {}
 
   async preloadData() {
@@ -254,6 +260,34 @@ export class PreloadDataService {
     //   customer.seller = seller;
     //   customer.priceList = priceList;
     //   await this.customerRepository.save(customer);
+    // }
+
+    // Cargar los Municipalities
+    // const municipalitiesData = JSON.parse(
+    //   fs.readFileSync(path.join(basePath, 'municipalities.json'), 'utf-8'),
+    // );
+    // for (const municipalityData of municipalitiesData) {
+    //   const municipality = this.municipalityRepository.create(municipalityData);
+    //   await this.municipalityRepository.save(municipality);
+    // }
+
+    // // Cargar los Neighborhoods
+    // const neighborhoodsData = JSON.parse(
+    //   fs.readFileSync(path.join(basePath, 'neighborhoods.json'), 'utf-8'),
+    // );
+    // for (const neighborhoodData of neighborhoodsData) {
+    //   const municipality = await this.municipalityRepository.findOne({
+    //     where: { id: neighborhoodData.municipalityId },
+    //   });
+    //   if (municipality) {
+    //     const neighborhood = this.neighborhoodRepository.create({
+    //       name: neighborhoodData.name,
+    //       lat: neighborhoodData.lat,
+    //       lon: neighborhoodData.lon,
+    //       municipality,
+    //     });
+    //     await this.neighborhoodRepository.save(neighborhood);
+    //   }
     // }
 
     console.log('Datos precargados correctamente');

@@ -8,6 +8,7 @@ import { UsuarioCustomer } from './entities/Usuario_Customer.entity';
 import { PriceList } from './entities/Price_List.entity';
 import { PriceListItem } from './entities/Price_List_Item.entity';
 import { Seller } from '../seller/entities/seller.entity';
+import { Neighborhood } from '../geo-segmentation/entities/neighborhood.entity';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { Seller } from '../seller/entities/seller.entity';
       PriceList,
       PriceListItem,
       Seller,
+      Neighborhood,
     ]),
   ],
   controllers: [CustomerController],

@@ -1,0 +1,27 @@
+[
+  { "name": "El Poblado", "lat": 6.2115, "lon": -75.5718, "municipalityId": 1 },
+  { "name": "Laureles", "lat": 6.2465, "lon": -75.5998, "municipalityId": 1 },
+  { "name": "Niquía", "lat": 6.3442, "lon": -75.5489, "municipalityId": 2 },
+  { "name": "París", "lat": 6.325, "lon": -75.56, "municipalityId": 2 },
+  { "name": "San Javier", "lat": 6.171, "lon": -75.614, "municipalityId": 3 },
+  { "name": "Santa María", "lat": 6.165, "lon": -75.605, "municipalityId": 3 },
+  {
+    "name": "Loma de los Bernal",
+    "lat": 6.1833,
+    "lon": -75.5833,
+    "municipalityId": 4
+  },
+  { "name": "Alcalá", "lat": 6.166, "lon": -75.59, "municipalityId": 4 },
+  { "name": "La Magnolia", "lat": 6.15, "lon": -75.62, "municipalityId": 5 },
+  { "name": "Holanda", "lat": 6.145, "lon": -75.615, "municipalityId": 5 },
+  { "name": "Ancón", "lat": 6.16, "lon": -75.645, "municipalityId": 6 },
+  { "name": "La Hondonada", "lat": 6.155, "lon": -75.64, "municipalityId": 6 },
+  { "name": "La Tablaza", "lat": 6.09, "lon": -75.63, "municipalityId": 7 },
+  { "name": "Buenos Aires", "lat": 6.085, "lon": -75.625, "municipalityId": 7 },
+  { "name": "Central", "lat": 6.345, "lon": -75.51, "municipalityId": 8 },
+  { "name": "El Carmelo", "lat": 6.34, "lon": -75.505, "municipalityId": 8 },
+  { "name": "La Madera", "lat": 6.375, "lon": -75.45, "municipalityId": 9 },
+  { "name": "Fontidueño", "lat": 6.37, "lon": -75.445, "municipalityId": 9 },
+  { "name": "El Progreso", "lat": 6.435, "lon": -75.335, "municipalityId": 10 },
+  { "name": "La Florida", "lat": 6.44, "lon": -75.33, "municipalityId": 10 }
+]

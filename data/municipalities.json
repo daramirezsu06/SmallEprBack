@@ -1,0 +1,12 @@
+[
+  { "name": "Medellín", "lat": 6.2442, "lon": -75.5812 },
+  { "name": "Bello", "lat": 6.3373, "lon": -75.5586 },
+  { "name": "Itagüí", "lat": 6.1715, "lon": -75.6092 },
+  { "name": "Envigado", "lat": 6.1667, "lon": -75.5833 },
+  { "name": "Sabaneta", "lat": 6.1515, "lon": -75.6166 },
+  { "name": "La Estrella", "lat": 6.1577, "lon": -75.6432 },
+  { "name": "Caldas", "lat": 6.0911, "lon": -75.6357 },
+  { "name": "Copacabana", "lat": 6.3463, "lon": -75.5089 },
+  { "name": "Girardota", "lat": 6.3778, "lon": -75.4467 },
+  { "name": "Barbosa", "lat": 6.4381, "lon": -75.3314 }
+]

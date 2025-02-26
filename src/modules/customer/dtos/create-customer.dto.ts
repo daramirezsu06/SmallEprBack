@@ -36,4 +36,8 @@ export class CreateCustomerDto {
   @IsNumber()
   @IsOptional()
   priceListId?: number;
+
+  @IsNumber()
+  @IsOptional()
+  neighborhoodId?: number;
 }

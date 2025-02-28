@@ -47,11 +47,11 @@ console.log(config());
 })
 export class AppModule implements OnModuleInit {
   constructor(private readonly preloadDataService: PreloadDataService) {}
-  // async onModuleInit() {
-  //   await console.log('la precarga de datos esta comentada');
-  // }
-
   async onModuleInit() {
-    await this.preloadDataService.preloadData();
+    await console.log('la precarga de datos esta comentada');
   }
+
+  // async onModuleInit() {
+  //   await this.preloadDataService.preloadData();
+  // }
 }

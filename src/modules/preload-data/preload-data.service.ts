@@ -56,7 +56,7 @@ export class PreloadDataService {
   ) {}
 
   async preloadData() {
-    Cargar los datos de TypeProduct
+    // Cargar los datos de TypeProduct
     const typeProductsData = JSON.parse(
       fs.readFileSync(path.join(basePath, 'type_products.json'), 'utf-8'),
     );
@@ -262,7 +262,7 @@ export class PreloadDataService {
       await this.customerRepository.save(customer);
     }
 
-    Cargar los Municipalities
+    // Cargar los Municipalities
     const municipalitiesData = JSON.parse(
       fs.readFileSync(path.join(basePath, 'municipalities.json'), 'utf-8'),
     );

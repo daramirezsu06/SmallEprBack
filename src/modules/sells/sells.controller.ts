@@ -8,6 +8,8 @@ export class SellsController {
 
   @Post()
   create(@Body() createSellDto: CreateSellDto) {
+    console.log(createSellDto);
+
     return this.sellsService.create(createSellDto);
   }
 

@@ -36,9 +36,6 @@ export class SellsService {
     });
     const seller = customer.seller;
 
-    console.log('seller', seller);
-    console.log('customer', customer);
-
     const queryRunner =
       this.sellRepository.manager.connection.createQueryRunner();
     await queryRunner.startTransaction();
@@ -63,20 +60,25 @@ export class SellsService {
           where: { id: sellItem.productId },
         });
         console.log('product', product);
-        const inventoryMovements = new InventoryMovements();
 
         const inventory = await this.inventoryRepository.findOne({
           where: { product: { id: product.id } },
           relations: ['product'],
         });
-
         console.log('inventory', inventory);
 
+        if (!inventory || inventory.quantity < sellItem.quantity) {
+          throw new Error(`Insufficient inventory for product ${product.id}`);
+        }
+
+        const inventoryMovements = new InventoryMovements();
         inventoryMovements.quantity = -sellItem.quantity;
         inventoryMovements.cost = inventory.cost;
         inventoryMovements.product = product;
         inventoryMovements.movementType =
-          await this.movementTypeRepository.findOne({ where: { id: 5 } });
+          await this.movementTypeRepository.findOne({
+            where: { id: 5 },
+          });
         await queryRunner.manager.save(InventoryMovements, inventoryMovements);
 
         const sellItemEntity = new SellItems();
@@ -87,9 +89,12 @@ export class SellsService {
         sellItemEntity.price = sellItem.price;
         sellItemEntity.inventoryMovements = inventoryMovements;
 
-        totalCost = totalCost + +inventory.cost * +sellItem.quantity;
-        totalPrice = totalCost + +sellItem.price * +sellItem.quantity;
-        totalQuantity = +totalQuantity + +sellItem.quantity;
+        totalCost += inventory.cost * sellItem.quantity;
+        totalPrice += sellItem.price * sellItem.quantity; // Corrección clave aquí
+        totalQuantity += sellItem.quantity;
+
+        inventory.quantity -= sellItem.quantity;
+        await queryRunner.manager.save(Inventory, inventory);
 
         await queryRunner.manager.save(SellItems, sellItemEntity);
       }

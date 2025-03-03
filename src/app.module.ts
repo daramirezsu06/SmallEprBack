@@ -19,7 +19,7 @@ import { PurchasesModule } from './modules/purchases/purchases.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { GeoSegmentationModule } from './modules/geo-segmentation/geo-segmentation.module';
 
-console.log(config());
+
 
 @Module({
   imports: [

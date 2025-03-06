@@ -1,20 +1,20 @@
 [
   {
     "name": "David Ramirez",
-    "email": "david.ramirez@example.com",
-    "password": "password123",
+    "email": "darasu@login.com",
+    "password": "123456admin",
     "roleId": 1
   },
   {
     "name": "Pablo Ramirez",
-    "email": "pablo.ramirez@example.com",
-    "password": "password123",
+    "email": "parara@login.com",
+    "password": "123456admin",
     "roleId": 1
   },
   {
     "name": "Jorge Marin",
-    "email": "jorge.marin@example.com",
-    "password": "password123",
+    "email": "jomasa@login.com",
+    "password": "123456vender",
     "roleId": 2
   }
 ]

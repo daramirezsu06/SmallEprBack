@@ -105,7 +105,7 @@ export class SellsService {
       await queryRunner.manager.save(Sell, sell);
 
       await queryRunner.commitTransaction();
-      return sell;
+      return await this.findOne(sell.id);
     } catch (err) {
       await queryRunner.rollbackTransaction();
       throw err;
@@ -122,7 +122,7 @@ export class SellsService {
   async findOne(id: number) {
     return await this.sellRepository.findOne({
       where: { id: id },
-      relations: ['seller', 'customer', 'sellItems'],
+      relations: ['seller', 'customer', 'sellItems', 'sellItems.product'],
     });
   }
 }

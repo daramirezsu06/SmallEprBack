@@ -17,6 +17,8 @@ export class GeoSegmentationService {
   async createMunicipality(createGeoSegmentationDto: CreateMunicipalityDto) {
     const newMunicipality = this.municipalityRepository.create();
     newMunicipality.name = createGeoSegmentationDto.name;
+    newMunicipality.lat = createGeoSegmentationDto.lat;
+    newMunicipality.lon = createGeoSegmentationDto.lon;
     return await this.municipalityRepository.save(newMunicipality);
   }
   async createNeighborhood(createGeoSegmentationDto: CreateNeighborhoodDto) {
@@ -25,6 +27,8 @@ export class GeoSegmentationService {
     });
     const newNeighborhood = this.neighborhoodRepository.create();
     newNeighborhood.name = createGeoSegmentationDto.name;
+    newNeighborhood.lat = createGeoSegmentationDto.lat;
+    newNeighborhood.lon = createGeoSegmentationDto.lon;
     newNeighborhood.municipality = municipality;
 
     return await this.neighborhoodRepository.save(newNeighborhood);

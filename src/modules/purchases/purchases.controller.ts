@@ -15,6 +15,10 @@ export class PurchasesController {
   findAllPurchases() {
     return this.purchasesService.findAllPurchases();
   }
+  @Get(':id')
+  findOnePurchase(@Body() id: number) {
+    return this.purchasesService.findOnePurchase(id);
+  }
 
   @Post('suppliers')
   createSupplier(@Body() supplier: CreateSupplierDto) {

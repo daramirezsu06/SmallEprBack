@@ -68,6 +68,16 @@ export class PurchasesService {
       relations: ['supplier'],
     });
   }
+  async findOnePurchase(id: number) {
+    return await this.purchaseRepository.findOne({
+      where: { id: id },
+      relations: [
+        'supplier',
+        'InventoryMovements',
+        'InventoryMovements.product',
+      ],
+    });
+  }
   async findAllSuppliers() {
     return await this.supplierRepository.find();
   }

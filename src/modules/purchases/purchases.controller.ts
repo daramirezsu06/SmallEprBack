@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get } from '@nestjs/common';
+import { Controller, Post, Body, Get, Param } from '@nestjs/common';
 import { PurchasesService } from './purchases.service';
 import { CreatePurchaseDto } from './dto/create-purchase.dto';
 import { CreateSupplierDto } from './dto/create-suppler.dto';
@@ -15,10 +15,6 @@ export class PurchasesController {
   findAllPurchases() {
     return this.purchasesService.findAllPurchases();
   }
-  @Get(':id')
-  findOnePurchase(@Body() id: number) {
-    return this.purchasesService.findOnePurchase(id);
-  }
 
   @Post('suppliers')
   createSupplier(@Body() supplier: CreateSupplierDto) {
@@ -28,5 +24,9 @@ export class PurchasesController {
   @Get('suppliers')
   findAllSuppliers() {
     return this.purchasesService.findAllSuppliers();
+  }
+  @Get(':id')
+  findOnePurchase(@Param('id') id: string) {
+    return this.purchasesService.findOnePurchase(+id);
   }
 }

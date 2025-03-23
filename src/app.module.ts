@@ -18,8 +18,8 @@ import { SellsModule } from './modules/sells/sells.module';
 import { PurchasesModule } from './modules/purchases/purchases.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { GeoSegmentationModule } from './modules/geo-segmentation/geo-segmentation.module';
-
-
+import { PaymentsModule } from './modules/payments/payments.module';
+import { PaymentsService } from './modules/payments/payments.service';
 
 @Module({
   imports: [
@@ -41,17 +41,26 @@ import { GeoSegmentationModule } from './modules/geo-segmentation/geo-segmentati
     PurchasesModule,
     AuthModule,
     GeoSegmentationModule,
+    PaymentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule implements OnModuleInit {
-  constructor(private readonly preloadDataService: PreloadDataService) {}
+  constructor(
+    private readonly preloadDataService: PreloadDataService,
+    private readonly paymentsService: PaymentsService,
+  ) {}
   async onModuleInit() {
     await console.log('la precarga de datos esta comentada');
   }
 
   // async onModuleInit() {
   //   await this.preloadDataService.preloadData();
+  // }
+
+  // async onModuleInit() {
+  //   await this.paymentsService.paymentAllBeforeDate();
+  //   console.log('se generaroon pagos para facturas antiguas');
   // }
 }

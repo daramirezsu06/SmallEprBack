@@ -10,6 +10,25 @@ import { InventoryMovements } from '../inventories/entities/inventory_movements.
 import { Inventory } from '../inventories/entities/inventory.entity';
 import { Customer } from '../customer/entities/customer.entity';
 import { MovementType } from '../inventories/entities/movement_Type.entity';
+import { SellResponseDto, SellStatus } from './dto/sell-response.dto';
+import { Payment } from '../payments/entities/payment.entity';
+import { PaymentSell } from '../payments/entities/payment_sell.entity';
+import { PaymentType } from '../payments/dto/create-payment.dto';
+
+// function calculateSellStatus(sell: Sell): SellStatus {
+//   const totalPaid =
+//     sell.paymentSells?.reduce(
+//       (sum, ps) => sum + Number(ps.allocatedAmount),
+//       0,
+//     ) || 0;
+//   if (totalPaid >= Number(sell.totalPrice)) {
+//     return SellStatus.PAID;
+//   }
+//   if (totalPaid > 0) {
+//     return SellStatus.PARTIALLY_PAID;
+//   }
+//   return SellStatus.PENDING;
+// }
 
 @Injectable()
 export class SellsService {
@@ -27,9 +46,12 @@ export class SellsService {
     private customerRepository: Repository<Customer>,
     @InjectRepository(MovementType)
     private movementTypeRepository: Repository<MovementType>,
+    @InjectRepository(Payment) private paymentRepository: Repository<Payment>,
+    @InjectRepository(PaymentSell)
+    private paymentSellRepository: Repository<PaymentSell>,
   ) {}
   async create(createSellDto: CreateSellDto) {
-    const { customerId, sellItems, paid } = createSellDto;
+    const { customerId, sellItems, type } = createSellDto;
     const customer = await this.customerRepository.findOne({
       where: { id: customerId },
       relations: ['seller'],
@@ -42,7 +64,6 @@ export class SellsService {
     try {
       const sell = new Sell();
       sell.seller = seller;
-      sell.paid = paid;
       sell.customer = customer;
       sell.quantity = 0;
       sell.totalCost = 0;
@@ -104,6 +125,20 @@ export class SellsService {
       sell.totalPrice = totalPrice;
       await queryRunner.manager.save(Sell, sell);
 
+      if (type === 'CASH') {
+        const payment = new Payment();
+        payment.amount = sell.totalPrice;
+        payment.paymentType = PaymentType.CASH;
+        payment.paymentDate = new Date();
+        payment.notes = 'resgistro automatico de pago por venta de contado';
+        await queryRunner.manager.save(Payment, payment);
+        const paymentSells = new PaymentSell();
+        paymentSells.payment = payment;
+        paymentSells.sell = sell;
+        paymentSells.allocatedAmount = sell.totalPrice;
+        await queryRunner.manager.save(PaymentSell, paymentSells);
+      }
+
       await queryRunner.commitTransaction();
       return await this.findOne(sell.id);
     } catch (err) {
@@ -115,14 +150,104 @@ export class SellsService {
   }
   async findAll() {
     return await this.sellRepository.find({
-      relations: ['seller', 'customer', 'sellItems'],
+      relations: ['seller', 'customer', 'sellItems', 'paymentSells'],
     });
   }
 
   async findOne(id: number) {
     return await this.sellRepository.findOne({
       where: { id: id },
-      relations: ['seller', 'customer', 'sellItems', 'sellItems.product'],
+      relations: [
+        'seller',
+        'customer',
+        'sellItems',
+        'sellItems.product',
+        'paymentSells',
+      ],
     });
+  }
+
+  async findByCustomer(customerId: number): Promise<SellResponseDto[]> {
+    const sells = await this.sellRepository.find({
+      where: { customer: { id: customerId } },
+      relations: ['paymentSells'],
+    });
+
+    const sellsWithStatus = sells.map((sell) => {
+      const totalPaid =
+        sell.paymentSells?.reduce(
+          (sum, ps) => sum + Number(ps.allocatedAmount),
+          0,
+        ) || 0;
+      const pendingAmount = Number(sell.totalPrice) - totalPaid;
+      let status: SellStatus;
+
+      if (totalPaid >= Number(sell.totalPrice)) {
+        status = SellStatus.PAID;
+      } else if (totalPaid > 0) {
+        status = SellStatus.PARTIALLY_PAID;
+      } else {
+        status = SellStatus.PENDING;
+      }
+
+      return {
+        ...sell,
+        status,
+        pendingAmount: pendingAmount > 0 ? pendingAmount : 0, // Saldo pendiente
+      };
+    });
+
+    return sellsWithStatus;
+  }
+  async findByCustomerPending(customerId: number): Promise<SellResponseDto[]> {
+    const sellsWithStatus = await this.findByCustomer(customerId);
+    console.log(sellsWithStatus);
+
+    return sellsWithStatus.filter((sell) => sell.status !== SellStatus.PAID);
+  }
+
+  async findAllPending() {
+    const sells = await this.sellRepository.find({
+      relations: ['paymentSells', 'customer'],
+    });
+    console.log(sells);
+
+    const sellsWithStatus = sells.map((sell) => {
+      const totalPaid =
+        sell.paymentSells?.reduce(
+          (sum, ps) => sum + Number(ps.allocatedAmount),
+          0,
+        ) || 0;
+      const pendingAmount = Number(sell.totalPrice) - totalPaid;
+      let status: SellStatus;
+
+      if (totalPaid >= Number(sell.totalPrice)) {
+        status = SellStatus.PAID;
+      } else if (totalPaid > 0) {
+        status = SellStatus.PARTIALLY_PAID;
+      } else {
+        status = SellStatus.PENDING;
+      }
+
+      return {
+        ...sell,
+        status,
+        pendingAmount: pendingAmount > 0 ? pendingAmount : 0, // Saldo pendiente
+      };
+    });
+
+    const totalPending = sellsWithStatus.reduce(
+      (sum, sell) => sum + sell.pendingAmount,
+      0,
+    );
+
+    const pendingList = sellsWithStatus.filter(
+      (sell) => sell.status !== SellStatus.PAID,
+    );
+
+    return {
+      totalPending,
+      pendingList,
+    };
   }
 }

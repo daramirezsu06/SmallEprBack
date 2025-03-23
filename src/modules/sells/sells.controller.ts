@@ -18,8 +18,25 @@ export class SellsController {
     return this.sellsService.findAll();
   }
 
+  @Get('pending')
+  findAllPending() {
+    return this.sellsService.findAllPending();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.sellsService.findOne(+id);
+  }
+  @Get('customer/:id')
+  findByCustomer(@Param('id') customerId: string) {
+    console.log(customerId);
+
+    return this.sellsService.findByCustomer(+customerId);
+  }
+  @Get('pending/customer/:id')
+  findByCustomerPending(@Param('id') customerId: string) {
+    console.log(customerId);
+
+    return this.sellsService.findByCustomerPending(+customerId);
   }
 }

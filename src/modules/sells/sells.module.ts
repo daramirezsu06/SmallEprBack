@@ -10,6 +10,8 @@ import { InventoryMovements } from '../inventories/entities/inventory_movements.
 import { Inventory } from '../inventories/entities/inventory.entity';
 import { Customer } from '../customer/entities/customer.entity';
 import { MovementType } from '../inventories/entities/movement_Type.entity';
+import { PaymentSell } from '../payments/entities/payment_sell.entity';
+import { Payment } from '../payments/entities/payment.entity';
 
 @Module({
   imports: [
@@ -22,6 +24,8 @@ import { MovementType } from '../inventories/entities/movement_Type.entity';
       Inventory,
       Customer,
       MovementType,
+      Payment,
+      PaymentSell,
     ]),
   ],
   controllers: [SellsController],

@@ -8,6 +8,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { SellItems } from './sell_items.entity';
+import { PaymentSell } from '../../payments/entities/payment_sell.entity';
 
 @Entity()
 export class Sell {
@@ -31,8 +32,8 @@ export class Sell {
   @OneToMany(() => SellItems, (sellItems) => sellItems.sell)
   sellItems: SellItems[];
 
-  @Column({ type: 'boolean', default: false })
-  paid: boolean;
+  @OneToMany(() => PaymentSell, (paymentSell) => paymentSell.sell)
+  paymentSells: PaymentSell[];
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createDate: Date;

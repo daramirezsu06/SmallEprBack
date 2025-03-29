@@ -40,4 +40,7 @@ export class Sell {
 
   @Column({ type: 'timestamp', nullable: true, onUpdate: 'CURRENT_TIMESTAMP' })
   updateDate: Date;
+
+  @Column({ type: 'varchar', nullable: true })
+  bill: string;
 }

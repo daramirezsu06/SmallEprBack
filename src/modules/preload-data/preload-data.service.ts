@@ -19,6 +19,7 @@ import { Customer } from '../customer/entities/customer.entity';
 import { TypeCustomer } from '../customer/entities/Type_Customer.entity';
 import { Municipality } from '../geo-segmentation/entities/municipality.entity';
 import { Neighborhood } from '../geo-segmentation/entities/neighborhood.entity';
+import { Sell } from '../sells/entities/sell.entity';
 const basePath = path.join(__dirname, '../../../data');
 
 @Injectable()
@@ -53,6 +54,8 @@ export class PreloadDataService {
     private municipalityRepository: Repository<Municipality>,
     @InjectRepository(Neighborhood)
     private neighborhoodRepository: Repository<Neighborhood>,
+    @InjectRepository(Sell)
+    private sellRepository: Repository<Sell>,
   ) {}
 
   async preloadData() {
@@ -290,6 +293,21 @@ export class PreloadDataService {
     //   }
     // }
 
-    console.log('Datos precargados correctamente');
+    // // const sellsChangesData = JSON.parse(
+    // //   fs.readFileSync(path.join(basePath, 'sellsChanges.json'), 'utf-8'),
+    // // );
+
+    // // for (const sellsChangeData of sellsChangesData) {
+    // //   const sell = await this.sellRepository.findOne({
+    // //     where: { id: sellsChangeData.id },
+    // //   });
+    // //   sell.seller = await this.sellerRepository.findOne({
+    // //     where: { id: sellsChangeData.sellerId },
+    // //   });
+
+    // //   await this.sellRepository.save(sell);
+    // // }
+
+    console.log('Datos modificados correctamente');
   }
 }

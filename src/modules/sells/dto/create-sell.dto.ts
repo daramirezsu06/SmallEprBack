@@ -1,4 +1,4 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsEmpty, IsNotEmpty } from 'class-validator';
 import { CreateSellItemDto } from './create-sell-item.dto';
 
 export enum typeSell {
@@ -14,4 +14,7 @@ export class CreateSellDto {
 
   @IsNotEmpty()
   sellItems: CreateSellItemDto[];
+
+  @IsEmpty()
+  bill?: string;
 }

@@ -51,7 +51,7 @@ export class SellsService {
     private paymentSellRepository: Repository<PaymentSell>,
   ) {}
   async create(createSellDto: CreateSellDto) {
-    const { customerId, sellItems, type } = createSellDto;
+    const { customerId, sellItems, type, bill } = createSellDto;
     const customer = await this.customerRepository.findOne({
       where: { id: customerId },
       relations: ['seller'],
@@ -123,6 +123,11 @@ export class SellsService {
       sell.quantity = totalQuantity;
       sell.totalCost = totalCost;
       sell.totalPrice = totalPrice;
+
+      if (bill) {
+        sell.bill = bill;
+      }
+
       await queryRunner.manager.save(Sell, sell);
 
       if (type === 'CASH') {

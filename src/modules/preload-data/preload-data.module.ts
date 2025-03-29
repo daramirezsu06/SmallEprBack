@@ -17,6 +17,7 @@ import { Customer } from '../customer/entities/customer.entity';
 import { TypeCustomer } from '../customer/entities/Type_Customer.entity';
 import { Municipality } from '../geo-segmentation/entities/municipality.entity';
 import { Neighborhood } from '../geo-segmentation/entities/neighborhood.entity';
+import { Sell } from '../sells/entities/sell.entity';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { Neighborhood } from '../geo-segmentation/entities/neighborhood.entity';
       TypeCustomer,
       Municipality,
       Neighborhood,
+      Sell,
     ]),
   ],
   providers: [PreloadDataService],
